@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Estudo: HTML Básico</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Guia de Estudo: Programação Front End</h1>
+        <nav>
+            <a href="#conteudo">Conteúdo</a> | 
+            <a href="#tabela">Resumo</a> | 
+            <a href="#avaliacao">Avaliação</a>
+        </nav>
+    </header>
+
+    <section id="conteudo">
+        <article>
+            <h2>O que é HTML?</h2>
+            <p>O HTML (<b>Hypertext Markup Language</b>) é a linguagem de marcação padrão para a criação de páginas da web.</p>
+            
+            <h3>Principais Tags de Texto</h3>
+            <ul>
+                <li><strong>h1; a h6;</strong>: Cabeçalhos de seção.</li>
+                <li><em> p </em>: Define um parágrafo.</li>
+                <li><mark> mark </mark>: Usado para destacar texto.</li>
+            </ul>
+
+            <h3>Exemplo de Link e Imagem</h3>
+            <p>Para aprender mais, visite o 
+                <a href="https://www.w3schools.com/html/" target="_blank" title="Tutorial de HTML">W3Schools</a>.
+            </p>
+            <img src="https://placehold.co/600x400" alt="Exemplo de Imagem em HTML"> 
+        </article>
+    </section>
+
+    <section id="tabela">
+        <h2>Resumo de Atributos do Link (Target)</h2>
+        <table id="table">
+            <tr>
+                <th>Atributo</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>_self</td>
+                <td>Abre na mesma janela (padrão).</td>
+            </tr>
+            <tr>
+                <td>_blank</td>
+                <td>Abre em uma nova janela ou guia.</td>
+            </tr>
+        </table> 
+    </section>
+
+    <aside>
+        <h4>Dica Rápida</h4>
+        <p><small>Sempre use a tag meta charset="UTF-8" para garantir a acentuação correta.</small></p>
+    </aside>
+
+    <hr>
+
+    <section id="avaliacao">
+        <h2>Formulário de Avaliação do Material</h2>
+        <form action="#" method="post"> 
+            <fieldset> 
+                <legend>Identificação e Percepção</legend> 
+                
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo"><br><br> 
+
+                <label>Qual utilizamos para texto?</label><br>
+                <input type="radio" id="P" name="util" value="P">
+                <label for="P">P</label>
+                <input type="radio" id="H" name="util" value="H">
+                <label for="H">H</label><br><br> 
+
+                <label for="abrir">Qual abre uma nova janela ou guia:</label>
+                <select id="abrir" name="abrir">
+                    <option value="_self">_self</option>
+                    <option value="_blank">_blank</option>
+                    <option value="_open">_open</option>
+                </select><br><br> 
+
+                <label>Que tags podemos utilizar na div?</label><br>
+                <input type="checkbox" id="class" name="tema" value="class">
+                <label for="class">class</label>
+                <input type="checkbox" id="id" name="tema" value="id">
+                <label for="id">id</label>
+                <input type="checkbox" id="fl" name="tema" value="fl">
+                <label for="fl">fl</label>
+                <input type="checkbox" id="ind" name="tema" value="ind">
+                <label for="ind">ind</label><br><br>
+
+                <label for="mensagem">Como utilizamos o img:</label><br>
+                <textarea id="mensagem" name="message" rows="4" cols="30"></textarea><br><br> 
+                <input type="submit" value="Enviar Avaliação"> 
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 - FEITO POR MIM MESMO.</p>
+    </footer>
+
+</body>
+</html>
