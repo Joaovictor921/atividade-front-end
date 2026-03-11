@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo Ultra-Secreto da Computação</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-base-200 min-h-screen">
+
+    <div class="navbar bg-primary text-primary-content sticky top-0 z-50 shadow-lg">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl font-bold " href="https://github.com/ProfDacioMachado" target="_blank">👨‍🏫Prof. Dacio👍</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1 hidden lg:flex font-semibold">
+                <li><a href="#pioneiros">Pioneiros</a></li>
+                <li><a href="#bugs">Bugs</a></li>
+                <li><a href="#easter-eggs">Easter Eggs</a></li>
+                <li><a href="#form">Enviar Inutilidade</a></li>
+            </ul>
+            <div class="dropdown dropdown-end lg:hidden">
+                <button class="btn btn-square btn-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+                    <li><a href="#pioneiros">Pioneiros</a></li>
+                    <li><a href="#bugs">Bugs</a></li>
+                    <li><a href="#easter-eggs">Easter Eggs</a></li>
+                    <li><a href="#form">Enviar Inutilidade</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero bg-base-100 py-12 border-b border-base-300">
+        <div class="hero-content text-center">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-black mb-4">Fatos Inúteis & Bits Perdidos</h1>
+                <p class="text-lg opacity-70">Informações que não vão melhorar seu código… mas vão melhorar sua aula.</p>
+                <div class="flex gap-2 justify-center mt-6">
+                <div class="badge badge-secondary p-4">
+                    <a class="badge badge-secondary p-4" href="https://sourceforge.net/projects/dev-cpp/files/Binaries/Dev-C%2B%2B%204.9.9.2/devcpp-4.9.9.2_setup.exe/download" target="_blank">🧑‍💻DEV-C++</a>  
+                </div>
+                <div class="badge badge-accent p-4">
+                    <a class="badge badge-accent p-4" href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" target="_blank">👨🏻‍💻VS-CODE</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 lg:p-12 space-y-20">
+
+        <section id="pioneiros">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-4">Pioneiros Esquecidos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card bg-base-100 shadow-xl border border-base-300">
+                    <div class="card-body">
+                        <div class="badge badge-primary">Primeira Programadora</div>
+                        <h3 class="card-title text-2xl">Ada Lovelace</h3>
+                        <p>Escreveu um algoritmo para a Máquina Analítica no século XIX, antes mesmo do primeiro computador existir.</p>
+                        <div class="collapse collapse-arrow bg-base-200 mt-4">
+                            <input type="checkbox" /> 
+                            <div class="collapse-title font-medium">Ver detalhe histórico</div>
+                            <div class="collapse-content text-sm">
+                                <p>Sua visão ia além do cálculo: ela previu que computadores poderiam criar música e arte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-neutral text-neutral-content shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl">Alan Turing</h3>
+                        <p class="italic text-lg">"Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."</p>
+                        <div class="divider divider-accent">Dica lateral</div>
+                        <p class="text-sm opacity-80">Seu trabalho decifrando a Enigma foi mantido em segredo absoluto por décadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bugs" class="bg-base-300 p-8 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center text-error">Bugs & Caos Digital</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="table table-zebra bg-base-100 rounded-xl overflow-hidden shadow-lg">
+                    <thead class="bg-error text-error-content">
+                        <tr>
+                            <th>Evento</th>
+                            <th>O que aconteceu?</th>
+                            <th>Custo/Nível de Caos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">Mariposa de 1947</td>
+                            <td>O primeiro "bug" físico encontrado em um Mark II.</td>
+                            <td><span class="badge badge-ghost font-mono">Original</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Ariane 5 (1996)</td>
+                            <td>Erro de conversão de 64 bits para 16 bits.</td>
+                            <td><span class="text-error font-bold">$370 Milhões</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Vírus Creeper</td>
+                            <td>"I'M THE CREEPER : CATCH ME IF YOU CAN"</td>
+                            <td><span class="badge badge-outline">Histórico</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Y2K (Ano 2000)</td>
+                            <td>Pânico global por causa de dois dígitos de data.</td>
+                            <td><span class="text-warning font-bold">Bilhões (Psicológico)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="easter-eggs" class="space-y-6">
+            <h2 class="text-3xl font-bold text-center">Easter Eggs Reais</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="stats shadow bg-secondary text-secondary-content">
+                    <div class="stat text-center">
+                        <div class="stat-title text-secondary-content opacity-70 uppercase">Excel 97</div>
+                        <div class="stat-value text-2xl">Flight Sim</div>
+                        <div class="stat-desc text-secondary-content italic mt-2 text-xs text-wrap">Simulador de voo escondido em células.</div>
+                    </div>
+                </div>
+                <div class="stats shadow bg-accent text-accent-content">
+                    <div class="stat text-center">
+                        <div class="stat-title text-accent-content opacity-70 uppercase">Chrome</div>
+                        <div class="stat-value text-2xl">Dino Run</div>
+                        <div class="stat-desc text-accent-content italic mt-2 text-xs">Aperte espaço sem internet.</div>
+                    </div>
+                </div>
+                <div class="stats shadow bg-neutral text-neutral-content">
+                    <div class="stat text-center">
+                        <div class="stat-title text-neutral-content opacity-70 uppercase">Konami Code</div>
+                        <div class="stat-value text-2xl">↑↑↓↓←→←→BA</div>
+                        <div class="stat-desc text-neutral-content italic mt-2 text-xs">O código universal.</div>
+                    </div>
+                </div>
+                <div class="stats shadow border-2 border-primary">
+                    <div class="stat text-center">
+                        <div class="stat-title opacity-70 uppercase">Linux</div>
+                        <div class="stat-value text-2xl">Sudo Sandwich</div>
+                        <div class="stat-desc italic mt-2 text-xs">"Okay."</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form" class="max-w-4xl mx-auto">
+            <div class="bg-base-100 p-8 rounded-2xl shadow-2xl border-t-8 border-primary">
+                <h2 class="text-3xl font-black mb-6 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    Envie seu Relato de Erro
+                </h2>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Seu Nome</span></label>
+                        <input type="text" placeholder="Ex: Ada Lovelace Jr." class="input input-bordered w-full" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Categoria</span></label>
+                        <select class="select select-bordered w-full">
+                            <option disabled selected>Escolha o tipo de bizarrice</option>
+                            <option>Bug de Sistema</option>
+                            <option>Curiosidade Viking</option>
+                            <option>Easter Egg</option>
+                            <option>Comando Estranho</option>
+                        </select>
+                    </div>
+                    <div class="form-control md:col-span-2">
+                        <label class="label"><span class="label-text">Descrição da Inutilidade</span></label>
+                        <textarea class="textarea textarea-bordered h-24" placeholder="Conte algo que ninguém precisa saber..."></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Grau de Estranheza (1-10)</span></label>
+                        <input type="range" min="0" max="100" value="40" class="range range-primary" />
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button class="btn btn-primary w-full">Transmitir para o Arquivo</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content mt-20">
+        <aside>
+            <span class="text-4xl font-bold text-primary italic">#_CONFUSÃO</span>
+            <p>© 2026 Instituto Internacional de Informações Desnecessárias<br/></p>
+        </aside> 
+        <nav>
+            <h6 class="footer-title">Links Inúteis</h6> 
+            <a class="link link-hover" href="https://www.gamedle.wtf/" target="_blank">Acerte o jogo</a>
+            <a class="link link-hover" href="#bugs">Registro de Erros</a>
+            <a class="link link-hover">contato@ultrasecreto.dev.br</a>
+        </nav> 
+    </footer>
+
+</body>
+</html>
