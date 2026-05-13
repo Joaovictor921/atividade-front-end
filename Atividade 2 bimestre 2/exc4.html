@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Bank - Simulador</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #1a1a2e; margin: 0; color: #333; }
+        .card { background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); width: 400px; box-sizing: border-box; }
+        h2 { text-align: center; color: #16213e; margin-bottom: 20px; }
+        .group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; }
+        select, input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+        button { width: 100%; padding: 12px; background-color: #0f3460; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        button:hover { background-color: #e94560; }
+        .resumo { margin-top: 20px; background: #f1f1f1; padding: 15px; border-radius: 6px; font-size: 15px; display: none; border-left: 5px solid #e94560; }
+        .resumo p { margin: 8px 0; }
+        .destaque { font-size: 18px; font-weight: bold; color: #e94560; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>💳 Infinity Bank</h2>
+    
+    <div class="group">
+        <label for="bandeira">Bandeira do Cartão:</label>
+        <select id="bandeira">
+            <option value="visa">Visa (2%)</option>
+            <option value="master">Mastercard (1.85%)</option>
+            <option value="elo">Elo (3%)</option>
+        </select>
+    </div>
+
+    <div class="group">
+        <label for="valor">Valor da Venda (R$):</label>
+        <input type="number" id="valor" step="0.01" placeholder="Ex: 1000.00">
+    </div>
+
+    <div class="group">
+        <label for="parcelas">Número de Parcelas:</label>
+        <input type="number" id="parcelas" min="1" max="24" value="1">
+    </div>
+
+    <button onclick="simularVenda()">Simular Transação</button>
+
+    <div class="resumo" id="resumo">
+        <p><strong>Taxa da Bandeira:</strong> R$ <span id="lblTaxaBandeira">0.00</span></p>
+        <p><strong>Juros da Parcela:</strong> R$ <span id="lblJuros">0.00</span></p>
+        <p><strong>Tarifa Fixa Mensal:</strong> R$ <span id="lblTarifa">0.00</span></p>
+        <p class="destaque">Valor da Parcela: R$ <span id="lblValorParcela">0.00</span></p>
+        <p style="font-size: 13px; color: #555;">Total a pagar: R$ <span id="lblTotal">0.00</span></p>
+    </div>
+</div>
+
+<script>
+function simularVenda() {
+    const bandeira = document.getElementById('bandeira').value;
+    const valorVenda = Number(document.getElementById('valor').value);
+    const parcelas = Number(document.getElementById('parcelas').value);
+    
+    if (valorVenda <= 0 || parcelas <= 0) {
+        alert("Insira valores válidos para simulação.");
+        return;
+    }
+
+    
+    let percentualBandeira = 0;
+    switch(bandeira) {
+        case 'visa':
+            percentualBandeira = 0.02; // 2%
+            break;
+        case 'master':
+            percentualBandeira = 0.0185; // 1.85%
+            break;
+        case 'elo':
+            percentualBandeira = 0.03; // 3%
+            break;
+    }
+
+    const taxaBandeira = valorVenda * percentualBandeira;
+
+    
+    const jurosPercentual = valorVenda * (0.0035 * parcelas);
+    const tarifaFixaTotal = 12.50 * parcelas;
+    const jurosTotais = jurosPercentual + tarifaFixaTotal;
+
+    
+    const valorTotal = valorVenda + taxaBandeira + jurosTotais;
+    const valorParcela = valorTotal / parcelas;
+
+    
+    document.getElementById('lblTaxaBandeira').textContent = taxaBandeira.toFixed(2);
+    document.getElementById('lblJuros').textContent = jurosPercentual.toFixed(2);
+    document.getElementById('lblTarifa').textContent = tarifaFixaTotal.toFixed(2);
+    document.getElementById('lblValorParcela').textContent = valorParcela.toFixed(2);
+    document.getElementById('lblTotal').textContent = valorTotal.toFixed(2);
+
+    document.getElementById('resumo').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
